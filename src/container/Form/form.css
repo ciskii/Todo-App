@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: var(--bg-form);
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 12px;
+  border: 0;
+  border-bottom: 1px solid #2e5cdb;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-footer-icons {
+  display: flex;
+  margin: 10px 5px;
+}
+
+.form-footer-icon {
+  font-size: 1.1rem;
+}
+
+.form-footer-icon:not(:first-child) {
+  margin-left: 20px;
+}
+
+.form-footer-button {
+  border: 0;
+  margin-top: 10px;
+  background: var(--bg-form);
+}
+
+.form-footer-button:hover {
+  cursor: pointer;
+}

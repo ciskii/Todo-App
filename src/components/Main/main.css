@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  margin: 10px;
+}

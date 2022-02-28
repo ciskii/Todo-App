@@ -7,7 +7,7 @@ const Navbar = () => {
       <span className='nav-icon'>
         <i className='far fa-clipboard'></i>
       </span>
-      <h1 className='nav-text'>Todo App</h1>
+      <h1 className='nav-text'>To Do</h1>
     </div>
   );
 };

@@ -1,22 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ListContext } from "../../Context/list-context";
 import "./list.css";
 
-const List = (props) => {
-  const list = props.list;
+const List = () => {
+  const { list } = useContext(ListContext);
 
   const items = list.map((item, index) => (
-    <div key={index}>
-      <h1>Topic : {item.topic}</h1>
-      <h3>Content: {item.content}</h3>
+    <div className='list-item' key={index}>
+      <p className='list-item-text list-item-content'>{item.content}</p>
+      <p className='list-item-text list-item-topic'>Task</p>
     </div>
   ));
 
-  return (
-    <div className='list'>
-      <h1>List</h1>
-      {items}
-    </div>
-  );
+  return <div className='list'>{items}</div>;
 };
 
 export default List;

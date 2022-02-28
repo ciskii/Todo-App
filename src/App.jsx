@@ -1,13 +1,21 @@
-import "./App.css";
+import { useState } from "react";
+
 import Navbar from "./components/Navbar/Navbar";
-import Task from "./components/Task/Task";
+import Main from "./components/Main/Main";
+import { ListContext } from "./Context/list-context";
+
+import "./App.css";
 
 function App() {
+  const [list, setList] = useState([
+    { topic: "First", content: "First test TO-DO-List" },
+  ]);
+
   return (
-    <div>
+    <ListContext.Provider value={{ list, setList }}>
       <Navbar />
-      <Task />
-    </div>
+      <Main />
+    </ListContext.Provider>
   );
 }
 
