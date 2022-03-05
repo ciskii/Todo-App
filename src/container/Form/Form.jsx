@@ -3,13 +3,34 @@ import { ListContext } from "../../Context/list-context";
 import "./form.css";
 
 const Form = () => {
-  const [form, setForm] = useState({ topic: "", content: "" });
-
+  const [form, setForm] = useState({ content: "" });
   const { list, setList } = useContext(ListContext);
 
+  // Add new Task
   const handleSubmit = (e) => {
     e.preventDefault();
-    setList((list) => [...list, form]);
+
+    const taskProp = "task-" + (list.size + 1);
+    const col = list.columns["column-1"];
+    const newTaskIds = [...list.columns["column-1"].taskIds, taskProp];
+
+    // Add new task in list.tasks
+    list.tasks[taskProp] = {
+      id: taskProp,
+      content: form.content,
+    };
+
+    // Add new Task id in list.columns["column-1"].taskIds
+    list.columns["column-1"].taskIds = newTaskIds;
+
+    // Increase size of tasks
+    const newList = {
+      ...list,
+      size: list.size + 1,
+    };
+
+    setList(newList);
+    setForm({ content: "" });
   };
 
   return (
@@ -21,7 +42,7 @@ const Form = () => {
             type='text'
             placeholder='Add a task'
             value={form.content}
-            onChange={(e) => setForm({ ...form, content: e.target.value })}
+            onChange={(e) => setForm({ content: e.target.value })}
           />
         </div>
       </form>
