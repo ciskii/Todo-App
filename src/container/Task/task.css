@@ -1,8 +1,8 @@
 .task-container {
-  border-bottom: 1px solid lightgrey;
+  /* border: 1px solid green; */
   padding: 8px;
   margin-bottom: 8px;
-  background-color: white;
+  background-color: lightcoral;
 
   font-size: 0.8rem;
 }
