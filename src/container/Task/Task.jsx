@@ -12,6 +12,7 @@ const Task = (props) => {
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
+          <h2>{props.task.id}</h2>
           {props.task.content}
         </div>
       )}

@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { ListContext } from "../../Context/list-context";
 import { DragDropContext } from "react-beautiful-dnd";
 import initialData from "../../Context/initialData";
-import Column from "./Column";
+import Column from "../Column/Column.jsx";
 import "./list-drag.css";
 
 const ListDrag = () => {
@@ -13,6 +13,9 @@ const ListDrag = () => {
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
 
+    console.log("destinaton", destination);
+    console.log("source", source);
+    // console.log("draggableId", draggableId);
     if (!destination) {
       return;
     }
@@ -26,7 +29,10 @@ const ListDrag = () => {
 
     const column = list.columns[source.droppableId];
 
+    console.log("column", column);
+
     const newTaskIds = Array.from(column.taskIds);
+
     newTaskIds.splice(source.index, 1);
     newTaskIds.splice(destination.index, 0, draggableId);
 
@@ -53,12 +59,14 @@ const ListDrag = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      {list.columnOrder.map((columnId) => {
-        const column = list.columns[columnId];
-        const tasks = column.taskIds.map((taskId) => list.tasks[taskId]);
+      <div className='list-container'>
+        {list.columnOrder.map((columnId) => {
+          const column = list.columns[columnId];
+          const tasks = column.taskIds.map((taskId) => list.tasks[taskId]);
 
-        return <Column key={column.id} column={column} tasks={tasks} />;
-      })}
+          return <Column key={column.id} column={column} tasks={tasks} />;
+        })}
+      </div>
     </DragDropContext>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
-import Task from "./Task";
+import Task from "../Task/Task.jsx";
 import { Droppable } from "react-beautiful-dnd";
 import "./column.css";
 
 const Column = (props) => {
   return (
     <div className='col-container'>
-      {/* <div className='title'>
+      <div className='title'>
         <h3>{props.column.title}</h3>
-      </div> */}
+      </div>
       <Droppable droppableId={props.column.id}>
         {(provided) => (
           <div
