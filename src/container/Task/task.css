@@ -3,6 +3,52 @@
   padding: 8px;
   margin-bottom: 8px;
   background-color: lightcoral;
-
   font-size: 0.8rem;
+  cursor: pointer !important;
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-container p {
+  display: flex;
+}
+
+.checkbox-container p::before {
+  content: "";
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  background-color: lightsalmon;
+}
+
+.checkbox-container p:hover::before,
+.checkbox-container input[type="checkbox"]:hover + p::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  content: "\002714";
+  background-color: lightgray;
+}
+
+.checkbox-container input[type="checkbox"]:checked + p::before {
+  content: "\002714";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
 }

@@ -20,16 +20,18 @@ const initialData = {
     "column-2": {
       id: "column-2",
       title: "Doing",
-      taskIds: ["task-5", "task-6"],
+      taskIds: ["task-5", "task-6", "task-8"],
     },
     "column-3": {
       id: "column-3",
       title: "Done",
-      taskIds: ["task-7"],
+      taskIds: ["task-7", "task-9", "task-10"],
     },
   },
   // Facilitate reordering of the columns
-  columnOrder: ["column-1", "column-2", "column-3"],
+  // columnOrder: ["column-1", "column-2", "column-3"],
+  columnOrder: ["column-1"],
+  lastId: 10,
   size: 10,
 };
 

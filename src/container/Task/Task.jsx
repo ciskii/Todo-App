@@ -9,6 +9,7 @@ const Task = (props) => {
   const handleMenu = (e) => {
     e.preventDefault();
 
+    // ******This is onchange-checklist branch*******
     // taskDel - task index to delete
     const taskDel = list.columns[props.colId].taskIds.indexOf(props.task.id);
 
@@ -42,7 +43,17 @@ const Task = (props) => {
           onContextMenu={handleMenu}
         >
           <h2>{props.task.id}</h2>
-          {props.task.content}
+          <div className='checkbox-container'>
+            <i class='fas fa-check'></i>
+
+            <input
+              type='checkbox'
+              onChange={() => {
+                console.log("HEYYYYYYY");
+              }}
+            />
+            <p className='task-content'>{props.task.content}</p>
+          </div>
         </div>
       )}
     </Draggable>

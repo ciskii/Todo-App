@@ -10,23 +10,24 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const taskProp = "task-" + (list.size + 1);
+    const newTaskId = "task-" + (list.lastId + 1);
     const col = list.columns["column-1"];
-    const newTaskIds = [...list.columns["column-1"].taskIds, taskProp];
+    const newTaskIds = [...list.columns["column-1"].taskIds, newTaskId];
 
     // Add new task in list.tasks
-    list.tasks[taskProp] = {
-      id: taskProp,
+    list.tasks[newTaskId] = {
+      id: newTaskId,
       content: form.content,
     };
 
     // Add new Task id in list.columns["column-1"].taskIds
     list.columns["column-1"].taskIds = newTaskIds;
 
-    // Increase size of tasks
+    // Increase size of tasks and task id
     const newList = {
       ...list,
       size: list.size + 1,
+      lastId: list.lastId + 1,
     };
 
     setList(newList);
