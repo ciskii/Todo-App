@@ -9,6 +9,7 @@ const Task = (props) => {
   const handleMenu = (e) => {
     e.preventDefault();
 
+    // *****this is onchange-checlist branch****
     // taskDel - task index to delete
     const taskDel = list.columns[props.colId].taskIds.indexOf(props.task.id);
 
