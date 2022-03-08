@@ -12,8 +12,6 @@ const ListDrag = () => {
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
 
-    console.log("destinaton", destination);
-    console.log("source", source);
     if (!destination) {
       return;
     }

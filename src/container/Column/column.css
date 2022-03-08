@@ -1,16 +1,17 @@
 .col-container {
-  margin-top: 8px;
   /* border: 1px solid red; */
+  max-width: 800px;
+  width: 800px;
   border-radius: 2px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .title {
   padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .tasklist {
-  width: 200px;
+  /* width: 200px; */
   min-height: 200px;
-  background-color: lightgray;
 }
