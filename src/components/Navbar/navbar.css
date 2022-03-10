@@ -4,7 +4,7 @@
   background-color: var(--bg-nav);
   color: white;
   /* border-bottom: 1px solid black; */
-  padding: 13px 25px;
+  padding: 10px 45px;
 }
 
 .nav-icon {
@@ -23,4 +23,8 @@
 
 .nav-text:hover {
   cursor: pointer;
+}
+
+.fa-home {
+  margin-left: 10px;
 }

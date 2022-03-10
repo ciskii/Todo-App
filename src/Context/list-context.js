@@ -1,7 +1,11 @@
 import { createContext } from "react";
 
 export const ListContext = createContext({
-  // list: [],
   list: {},
   setList: () => {},
+});
+
+export const SidebarContext = createContext({
+  sidebar: true,
+  setSidebar: () => {},
 });

@@ -6,4 +6,10 @@
   --bg-nav: #0078d7;
   --bg-gray: #e5e5e5;
   --font-gray: rgb(96, 94, 92);
+  --side-width: 300px;
+}
+
+.side-main {
+  display: flex;
+  height: calc(100vh - 43px);
 }

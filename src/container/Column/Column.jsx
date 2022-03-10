@@ -5,10 +5,10 @@ import "./column.css";
 
 const Column = (props) => {
   return (
-    <div className='col-container'>
-      <div className='title'>
+    <div className='col'>
+      {/* <div className='title'>
         <h3>{props.column.title}</h3>
-      </div>
+      </div> */}
       <Droppable droppableId={props.column.id}>
         {(provided) => (
           <div

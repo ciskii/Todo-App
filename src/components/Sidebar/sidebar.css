@@ -1,0 +1,34 @@
+.side {
+  background-color: #fafafa;
+  width: var(--side-width);
+  transition: all 0.25s;
+}
+
+.no-side {
+  /* width: var(--side-width); */
+  margin-left: calc(var(--side-width) * -1);
+  transition: all 0.25s;
+}
+
+.side-ul {
+  margin-top: 30px;
+}
+
+.side-li {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.side-li:hover {
+  background-color: #ececec;
+}
+
+.side-li p {
+  padding-left: 8px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}

@@ -32,6 +32,8 @@ const Form = () => {
 
     setList(newList);
     setForm({ content: "" });
+
+    console.log("newList", newList);
   };
 
   return (

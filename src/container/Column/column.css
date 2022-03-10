@@ -1,9 +1,7 @@
-.col-container {
-  /* border: 1px solid red; */
-  max-width: 800px;
-  width: 800px;
+.col {
+  width: 100%;
   border-radius: 2px;
-  /* background-color: aquamarine; */
+  margin: 0 auto;
 }
 
 .title {
@@ -12,6 +10,5 @@
 }
 
 .tasklist {
-  /* width: 200px; */
   min-height: 200px;
 }

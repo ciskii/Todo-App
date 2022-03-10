@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-// import "./task.css";
-import "./task-onchange.css";
+import "./task.css";
 import { Draggable } from "react-beautiful-dnd";
 import { ListContext } from "../../Context/list-context";
 
@@ -64,21 +63,21 @@ const Task = (props) => {
     <Draggable draggableId={props.task.id} index={props.index}>
       {(provided) => (
         <div
-          className='task-container'
+          className='task'
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
           onContextMenu={handleCheck}
         >
-          <h2>{props.task.id}</h2>
-          <div className='checkbox-container'>
+          <h2 className='task-id'>{props.task.id}</h2>
+          <div className='task-checkbox'>
             {props.colId == "column-1" ? (
               <div>
                 <input type='checkbox' onChange={handleCheck} />
-                <p className='task-content'>{props.task.content}</p>
+                <p className='task-checkbox-content'>{props.task.content}</p>
               </div>
             ) : (
-              <p className='task-content'>{props.task.content}</p>
+              <p className='task-checkbox-content'>{props.task.content}</p>
             )}
           </div>
         </div>

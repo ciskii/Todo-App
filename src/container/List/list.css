@@ -1,17 +1,6 @@
-.list {
+.list-container {
+  margin-top: 8px;
   display: flex;
-  flex-direction: column;
-}
-
-.list-item {
-  padding: 12px;
-  border-bottom: 1px solid var(--bg-gray);
-}
-
-.list-item-text {
-  font-size: 0.875rem;
-}
-
-.list-item-content {
-  padding-bottom: 5px;
+  justify-content: space-around;
+  margin-top: 10px;
 }
